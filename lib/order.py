@@ -12,10 +12,9 @@ class Order():
     def remove_item(self, item):
         if item not in self._order:
             raise Exception('This item is not in your order')
-        else:
-            self._order.remove(item)
-            self._total -= item.get_dish_price()
-            return f'{item.get_dish_name()} removed from your order'
+        self._order.remove(item)
+        self._total -= item.get_dish_price()
+        return f'{item.get_dish_name()} removed from your order'
         
     def summary_order(self):
         if not self._order:

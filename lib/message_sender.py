@@ -15,14 +15,20 @@ class TextMessager():
 
         client = Client(account_sid, auth_token)
 
+        # Creates item list based on selected dishes
         item_list = "\n".join([f"{items_delivered.count(item)} x {item.get_dish_name()}" for item in items_delivered])
 
         message = client.messages.create(
             to=f"+44{self.customer.get_number()[1:]}",
             from_="+447380314231",
-            body=f"Hi {self.customer.get_name()}! Your order was placed and will be delivered at {self.new_time.strftime('%H:%M')}\nYour order:\n{item_list}\nTotal Amount Paid: £{total_amount_paid:.2f}"
+            body= 
+                f"Hi {self.customer.get_name()}! Your order was placed and will be delivered at "
+                f"{self.new_time.strftime('%H:%M')}\n\n"
+                f"Your order:\n{item_list}\n"
+                f"Total Amount Paid: £{total_amount_paid:.2f}"
         )
 
+        # Creates a log file
         with open('SMS_Log.txt', 'a') as f:
             f.write('SID: ' + str(message.sid))
             f.write('\n')

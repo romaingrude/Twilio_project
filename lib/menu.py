@@ -1,5 +1,5 @@
 class Menu():
-
+    
     def __init__(self):
         self._menu = []
 
@@ -12,5 +12,4 @@ class Menu():
     def list_menu(self):
         if not self._menu:
             raise Exception('The menu has no dishes')
-        else:
-            return '\n'.join(dish.format_dish() for dish in self._menu)
+        return '\n'.join([dish.format_dish() for dish in self._menu])
