@@ -2,13 +2,13 @@
 
 ## Overview
 
-The Twilio Takeaway Project is a food ordering application developed in Python, designed to provide an intuitive interface for customers to place orders. This project is part of the learning process for Object-Oriented Programming (OOP) principles and API integration. It leverages the Twilio API to send SMS notifications to customers, summarising their order and providing the total amount due. 
+The Twilio Takeaway Project is a food ordering application developed in Python, designed to provide an intuitive interface for customers to place orders. This project is part of the learning process for Object-Oriented Programming (OOP) principles and API integration. It leverages the Twilio API to send SMS notifications to customers, summarising their order and providing the total amount due.
 
 ## Project Description
 
 This repository contains the complete implementation of the Twilio Takeaway application. Key components include:
 
-- **Interface**: A user-friendly interface that displays available food items along with their prices. The interface allows users to modify and add food items as needed.
+- **Interface**: A user-friendly graphical interface that displays available food items along with their prices. This interface was an additional feature that I implemented to go beyond the basic requirements, as the project was originally intended to be used via CLI or within an IDE. It allows users to modify and add food items as needed.
 - **Order Processing**: The application processes customer orders and calculates the total amount due.
 - **SMS Notifications**: Utilises the Twilio API to send an SMS to the customer’s phone number, including an order recap and the total amount due.
 - **Logfile Method**: The `SMS` class includes a `logfile` method that creates a text file in the project's directory to log SMS activities.
@@ -16,7 +16,7 @@ This repository contains the complete implementation of the Twilio Takeaway appl
 ## Usage
 
 1. **Run the Interface**: To start the application, execute the `interface.py` file located in the `interface` directory.
-2. **Modify Food Items**: Adjust the customer instance, food items, and their details within the `interface.py` file as needed.
+2. **Select Food Items**: Choose food items and view their prices through the interface.
 3. **SMS Functionality**: The application will send an SMS recap of the order to the customer, leveraging Twilio’s API for communication.
 
 ## Features
@@ -37,5 +37,4 @@ This repository contains the complete implementation of the Twilio Takeaway appl
 - **API Integration**: Configuring and integrating the Twilio API required thorough testing and adjustments.
 - **Interface Usability**: Ensuring the interface was user-friendly and met all project requirements was a key challenge.
 
-This repository showcases the implementation of a takeaway ordering system with SMS notification capabilities, reflecting the integration of various technologies to enhance user experience and functionality.
-
+This repository showcases the implementation of a takeaway ordering system with SMS notification capabilities, reflecting the integration of various technologies to enhance user experience and functionality. The addition of a user interface, beyond the original CLI requirements, demonstrates an extra mile effort to provide a more comprehensive and interactive solution.
